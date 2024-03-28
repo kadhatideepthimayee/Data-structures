@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int A[50],i,posi,val,n;
+    printf("Enter the size of the array");
+    scanf("%d",&n);
+    printf("Enter the element array:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&A[i]);
+    }
+    printf("Enter the position and value:");
+    scanf("%d%d",&posi,&val);
+    for(i=n;i>posi;i--)
+    {
+        A[i]=A[i-1];
+    }
+    A[posi]=val;
+    printf("The output\n");
+    for(i=0;i<=n;i++)
+    {
+        printf("%d\t",A[i]);
+    }
+    return 0;
+}
